@@ -1,0 +1,17 @@
+.App-header{
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    z-index: -9;
+}
+.placeholder {
+    background: transparent;
+    outline: none;
+}
+.icon {
+    transition: transform 0.5s ease-in-out;
+}
+
+.icon:hover {
+    transform: rotateY(180deg);
+}

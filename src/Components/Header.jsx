@@ -4,6 +4,11 @@ import { CiMail } from "react-icons/ci";
 import { IoIosSearch } from "react-icons/io";
 import Home from '../Pages/Home';
 import { Route, Routes } from 'react-router-dom';
+import { CiHeart } from "react-icons/ci";
+import { CgProfile } from "react-icons/cg";
+import { FaCartShopping } from "react-icons/fa6";
+import '../App.css';
+
 
 
 function Header() {
@@ -34,21 +39,35 @@ function Header() {
           />
         </div>
         <div className="input border-2 border-gray-500/50 w-[500px] h-[60px] flex justify-between ml-20 font-bold">
-          <input type="text" placeholder="search the store" className="ml-2" />
+          <input type="text" placeholder="search the store" className="ml-2 placeholder" />
           <button className="mr-3 flex gap-1 h-10 mt-2 bg-yellow-400 text-[18px] w-[100px] pl-3 hover:bg-gray-700 hover:transform hover:translate-x-2 transition-transform duration-500 ease-in-out">
             <IoIosSearch className="mt-3" />
             <span className="mt-2">Search</span>
           </button>
         </div>
-        <div className="icons ml-20 flex gap-5">
+        <div className="icons ml-20 pt-3 flex gap-5">
           <div className="flex flex-col items-center group">
             <FaPhoneAlt className="group-hover:rotate-180 transition-transform duration-500 ease-in-out" />
-            <p className='mt-3'> Call us</p>
+            <p className='mt-3'> Call us <br/> 9815467707</p>
+            
           </div>
-        </div>
+          <div className='logow pl-32 flex gap-8'>
+    <div className='text-[30px]'>
+        <CiHeart className='icon hover:text-yellow-400' />
+    </div>
+    <div className='text-[30px]'>
+        <CgProfile className='icon hover:text-yellow-400' />
+    </div>
+    <div className='text-[30px]'>
+        <FaCartShopping className='icon hover:text-yellow-400' />
+    </div>
+</div>
+</div>
       </header>
+      
       <Routes>
       <Route path="/" element={<Home/>}/>
+      
       
       
      </Routes>
