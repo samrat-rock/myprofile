@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Sir } from '../Components/Sir'
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 function Home() {
+  let [cat, setCat]=useState([])
+    useEffect(()=>{
+      fetch('https://dummyjson.com/products/categories')
+      .then(res => res.json())
+      .then((a)=>setCat(a));
+    },[])
+  
   return (
     <>
     <div className='App-header'>
@@ -25,12 +33,36 @@ function Home() {
   </button>
 </div>
 
-    <p>Shop by categories</p>
+<div className="shop-categories">
+            <p className="category-title">Shop by categories</p>
+            <ul className="list-group">
+                {cat.map((a) => (
+                    <li key={a.slug}>
+                        <Link to={`/cat/${a.slug}`}>{a.name}</Link>
+                    </li>
+                ))}
+            </ul>
+        </div>
   </div>
 
   
   <div className='ml-4 text-2xl p-3 hover:bg-gray-500'>
     <p>About us</p>
+  </div>
+  <div className='ml-4 text-2xl p-3 hover:bg-gray-500'>
+    <p>Return Policy</p>
+  </div>
+  <div className='ml-4 text-2xl p-3 hover:bg-gray-500'>
+    <p>Terms & Conditions</p>
+  </div>
+  <div className='ml-4 text-2xl p-3 hover:bg-gray-500'>
+    <p>Shipping & Retrun</p>
+  </div>
+  <div className='ml-4 text-2xl p-3 hover:bg-gray-500'>
+    <p>Contact Us</p>
+  </div>
+  <div className='ml-4 text-2xl p-3 hover:bg-gray-500'>
+    <p>Blog</p>
   </div>
 </div>
 

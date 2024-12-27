@@ -15,3 +15,29 @@
 .icon:hover {
     transform: rotateY(180deg);
 }
+
+.shop-categories {
+    position: relative;
+}
+
+.category-title {
+    cursor: pointer;
+}
+
+.list-group {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+    height: 500px;
+    overflow: auto;
+    width: 400px;
+    
+}
+
+.shop-categories:hover .list-group {
+    display: block;
+}
