@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Sir } from '../Components/Sir'
 import '../App.css';
 import { Link } from 'react-router-dom';
+import ProductBycat from '../Components/ProductBy';
 
 function Home() {
   let [cat, setCat]=useState([])
@@ -10,6 +11,8 @@ function Home() {
       .then(res => res.json())
       .then((a)=>setCat(a));
     },[])
+
+    
   
   return (
     <>
@@ -65,6 +68,18 @@ function Home() {
     <p>Blog</p>
   </div>
 </div>
+
+    <section className='flex justify-between py-3'>
+      <div></div>
+      <div>
+        <img className='w-100' src="https://cdn11.bigcommerce.com/s-uszeqex11r/images/stencil/original/carousel/7/slider.jpg?c=1" alt="" />
+      </div>
+    </section>
+    
+    <ProductBycat tt='beauty'/>
+    <ProductBycat tt='fragrances'/>
+    <ProductBycat tt='laptops'/>
+    <ProductBycat tt='furniture'/>
 
     </>
     

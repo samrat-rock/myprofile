@@ -41,3 +41,22 @@
 .shop-categories:hover .list-group {
     display: block;
 }
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.list-group {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 200px; /* Adjust as needed */
+    height: 300px;
+    overflow: auto;
+}

@@ -8,6 +8,7 @@ import { CiHeart } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { FaCartShopping } from "react-icons/fa6";
 import '../App.css';
+import Category from '../Pages/Category';
 
 
 
@@ -67,6 +68,7 @@ function Header() {
       
       <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/cat/:cid" element={<Category/>}/>
       
       
       
